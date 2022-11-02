@@ -8,7 +8,7 @@ from tic_tac_toe.logic.models import GameState, Mark, Move
 
 class Player(metaclass=abc.ABCMeta):
     def __init__(self, mark: Mark) -> None:
-        self.mark = Mark
+        self.mark = mark
 
     def make_move(self, game_state: GameState) -> GameState:
         if self.mark is game_state.current_mark:
